@@ -28,3 +28,4 @@ def jump_search(arr, target):
 array = [1, 3, 5, 7, 9, 11, 13, 15]
 index = jump_search(array, 9)
 print(f"Индекс элемента 9: {index}")
+#вывод = Индекс элемента 9: 4
