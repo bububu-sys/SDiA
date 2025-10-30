@@ -33,3 +33,4 @@ def binary_search(arr, left, right, target):
 array = [1, 3, 5, 7, 9, 11, 13, 15]
 index = exponential_search(array, 9)
 print(f"Индекс элемента 9: {index}")
+#вывод = Индекс элемента 9: 4
