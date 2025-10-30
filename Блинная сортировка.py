@@ -18,3 +18,4 @@ def pancake_sort(arr):
 # Пример использования
 array = [3, 6, 1, 5, 2, 4]
 print(pancake_sort(array))
+#вывод = [1, 2, 3, 4, 5, 6]
