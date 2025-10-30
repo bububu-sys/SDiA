@@ -25,3 +25,4 @@ def gravity_bead_sort(arr):
 array = [5, 3, 1, 7, 4]
 sorted_array = gravity_bead_sort(array)
 print(sorted_array)
+#вывод = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
