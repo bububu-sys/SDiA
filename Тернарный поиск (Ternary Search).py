@@ -30,3 +30,4 @@ def ternary_search(arr, target, left=0, right=None):
 array = [1, 3, 5, 7, 9, 11, 13, 15]
 index = ternary_search(array, 9)
 print(f"Индекс элемента 9: {index}")
+#вывод = Индекс элемента 9: 4
