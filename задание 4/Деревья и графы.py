@@ -52,3 +52,41 @@ class Tree:
             return path
         else:
             return None
+
+
+#Графы. Алгоритм Дейкстры
+import heapq
+
+def dijkstra(graph, start):
+    # Инициализация расстояний до всех вершин как бесконечность
+    distances = {vertex: float('infinity') for vertex in graph}
+    distances[start] = 0
+    # Очередь с приоритетом
+    queue = [(0, start)]
+
+    while queue:
+        current_distance, current_vertex = heapq.heappop(queue)
+        # Если нашли более короткий путь — пропускаем
+        if current_distance > distances[current_vertex]:
+            continue
+        # Проверяем всех соседей
+        for neighbor, weight in graph[current_vertex].items():
+            # Рассчитываем расстояние через текущую вершину
+            distance = current_distance + weight
+            # Обновляем, если нашли лучше
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                heapq.heappush(queue, (distance, neighbor))
+    return distances
+
+# Пример вызыва
+graph = {
+    'A': {'B': 4, 'C': 7},
+    'B': {'A': 4, 'C': 1, 'D': 2},
+    'C': {'A': 7, 'B': 1, 'D': 3},
+    'D': {'B': 2, 'C': 3, 'E': 1},
+    'E': {'D': 1},
+}
+
+distances = dijkstra(graph, 'A')
+print("Кратчайшие расстояния от A:", distances)
