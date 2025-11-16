@@ -4,6 +4,66 @@
 
 #include <iostream>
 #include <vector>
+#include <list>
+#include <limits>
+#include <queue>
+
+using namespace std;
+
+// Узел дерева
+struct Node {
+    int key;
+    Node* left;
+    Node* right;
+
+    Node(int k) : key(k), left(nullptr), right(nullptr) {}
+};
+
+// Класс дерева
+class Tree {
+private:
+    Node* root;
+
+    Node* doInsert(Node* node, int key) {
+        if (node == nullptr) {
+            return new Node(key);
+        }
+        if (key < node->key) {
+            node->left = doInsert(node->left, key);
+        } else if (key > node->key) {
+            node->right = doInsert(node->right, key);
+        }
+        return node;
+    }
+public:
+    Tree() : root(nullptr) {}
+
+    void insert(int key) {
+        root = doInsert(root, key);
+    }
+
+    Node* getRoot() {
+        return root;
+    }
+
+    // Поиск пути от корня до целевого узла
+    static bool findPath(Node* root, int target, vector<int>& path) {
+        if (root == nullptr) return false;
+        path.push_back(root->key);
+        if (root->key == target)
+            return true;
+        if (findPath(root->left, target, path) || findPath(root->right, target, path))
+            return true;
+        path.pop_back();
+        return false;
+    }
+};
+
+
+
+
+#include <iostream>
+#include <vector>
 #include <limits>
 #include <queue>
 
