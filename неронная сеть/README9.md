@@ -199,3 +199,12 @@ O(n log n).
 - ReLU vs Sigmoid: ReLU не насыщается, быстрее, борется с vanishing gradient.
 
 - Выбор архитектуры: Зависит от задачи: CNN — изображения, RNN — последовательности, Transformer — текст.
+________________________________________________________________________________________________
+**Вывод из терминала после обучения**
+---------------------------------------------------------------------------
+<img width="1196" height="927" alt="Снимок экрана 2025-12-14 224513" src="https://github.com/user-attachments/assets/a4a77272-eb77-4a69-a6f0-2c54b8b51fcf" />
+
+<img width="1207" height="774" alt="Снимок экрана 2025-12-14 224521" src="https://github.com/user-attachments/assets/fdeddff0-3a09-4d1c-8cd2-3734d10c93ec" />
+
+<img width="1172" height="774" alt="Снимок экрана 2025-12-14 224535" src="https://github.com/user-attachments/assets/f66975cd-74f5-411f-8145-27583d9517a8" />
+
